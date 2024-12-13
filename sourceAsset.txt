@@ -1,0 +1,4 @@
+Asset untuk Logo di index.html dalam header itu dapat dari Free Pick,
+dan untuk Asset yang ad di dalamnya didapat dari github https://github.com/mdalmamunit427/advanced-reactjs-ecommerce-website-starter-files, selain Asset disitu juga 
+terdapat CSS,JSnya juga dan data Dummynya tapi karna saya data Dummynya dari API Json,sehingga data dummya juga tidak dipakai
+dan untuk Icon, saya menggunakan Ico-Font (https://icofont.com/).
