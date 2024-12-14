@@ -53,7 +53,8 @@ const CartPage = () => {
   }, 0);
 
   // order Total
-  const orderCartTotal = cartSubTotal;
+  const orderCartTotal = parseFloat(cartSubTotal.toFixed(2));
+  console.log(orderCartTotal);
 
   return (
     <div>
@@ -107,6 +108,7 @@ const CartPage = () => {
                             value={item.quantity}
                             min={1}
                             max={item.stock}
+                            disabled
                             onChange={(e) => {
                               const newQuantity = Number(e.target.value);
                               if (
@@ -140,9 +142,7 @@ const CartPage = () => {
                         </div>
                       </td>
                       <td>
-                        <div className="cat-toprice">
-                          ${calculatedTotalPrice(item)}
-                        </div>
+                        <div className="cat-toprice">${orderCartTotal}</div>
                       </td>
                       <td className="cart-edit">
                         <a href="#" onClick={() => handleDeleteItem(item)}>
@@ -172,7 +172,6 @@ const CartPage = () => {
                 </form>
 
                 <form className="cart-checkout">
-                  <input type="submit" value={"Update Cart"} />
                   <div>
                     <CheckOutPage />
                   </div>

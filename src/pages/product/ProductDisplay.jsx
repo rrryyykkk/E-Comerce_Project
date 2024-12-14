@@ -6,7 +6,7 @@ import { addToCart } from "../../redux/slice";
 
 /* eslint-disable react/prop-types */
 const ProductDisplay = ({ item }) => {
-  const { title, id, price, rating = {}, description, quantity } = item;
+  const { title, id, price, rating = {}, description, quantity, stock } = item;
   const { rate = 0, count = 0 } = rating;
 
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const ProductDisplay = ({ item }) => {
     setColor(e.target.value);
   };
   const handleIncrement = () => {
-    setPreQuantity((prev) => Math.min(prev + 1 || 10));
+    setPreQuantity((prev) => Math.min(prev + 1, stock));
   };
   const handleDecrement = () => {
     setPreQuantity((prev) => Math.max(1, prev - 1));
@@ -97,6 +97,7 @@ const ProductDisplay = ({ item }) => {
                   setPreQuantity(Math.max(1, Math.min(e.target.value, 10)));
                 }}
                 className="cart-plus-minus-box"
+                disabled
               />
               <div className="inc qtybutton" onClick={handleIncrement}>
                 +
