@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const subTitle = "Save The Day";
 const title = (
   <h2 className="title">
@@ -44,9 +46,9 @@ const Register = () => {
                   placeholder="Phone"
                   className="reg-input"
                 />
-                <button className="lab-btn" type="submit">
+                <Link to={"/signup"} className="lab-btn" type="submit">
                   Register Now
-                </button>
+                </Link>
               </form>
             </div>
           </div>

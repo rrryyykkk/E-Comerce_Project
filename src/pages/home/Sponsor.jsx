@@ -6,24 +6,32 @@ import "swiper/css/pagination";
 
 import { Autoplay } from "swiper/modules";
 
+// imgUrl
+import imgUrl_1 from "../../assets/images/sponsor/01.png";
+import imgUrl_2 from "../../assets/images/sponsor/02.png";
+import imgUrl_3 from "../../assets/images/sponsor/03.png";
+import imgUrl_4 from "../../assets/images/sponsor/04.png";
+import imgUrl_5 from "../../assets/images/sponsor/05.png";
+import imgUrl_6 from "../../assets/images/sponsor/06.png";
+
 const sponsorList = [
   {
-    imgUrl: "/src/assets/images/sponsor/01.png",
+    imgUrl: imgUrl_1,
   },
   {
-    imgUrl: "/src/assets/images/sponsor/02.png",
+    imgUrl: imgUrl_2,
   },
   {
-    imgUrl: "/src/assets/images/sponsor/03.png",
+    imgUrl: imgUrl_3,
   },
   {
-    imgUrl: "/src/assets/images/sponsor/04.png",
+    imgUrl: imgUrl_4,
   },
   {
-    imgUrl: "/src/assets/images/sponsor/05.png",
+    imgUrl: imgUrl_5,
   },
   {
-    imgUrl: "/src/assets/images/sponsor/06.png",
+    imgUrl: imgUrl_6,
   },
 ];
 

@@ -13,6 +13,10 @@ import imgUrl_1 from "../../assets/images/about/icon/01.jpg";
 import imgUrl_2 from "../../assets/images/about/icon/02.jpg";
 import imgUrl_3 from "../../assets/images/about/icon/03.jpg";
 
+// about Thumb
+import imgAboout_1 from "../../assets/images/about/01.jpg";
+import imgAboout_2 from "../../assets/images/about/02.jpg";
+
 const aboutList = [
   {
     imgUrl: imgUrl_1,
@@ -44,10 +48,10 @@ const About = () => {
             <div className="col">
               <div className="about-left">
                 <div className="about-thumb">
-                  <img src="/src/assets/images/about/01.jpg" alt="" />
+                  <img src={imgAboout_1} alt="" />
                 </div>
                 <div className="abs-thumb">
-                  <img src="/src/assets/images/about/02.jpg" alt="" />
+                  <img src={imgAboout_2} alt="" />
                 </div>
                 <div className="about-left-content">
                   <h1>{year}</h1>
