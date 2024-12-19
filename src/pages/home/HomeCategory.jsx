@@ -1,71 +1,83 @@
 import { Link } from "react-router-dom";
 
+// Import gambar langsung
+import img1 from "../../assets/images/category/01.jpg";
+import img2 from "../../assets/images/category/02.jpg";
+import img3 from "../../assets/images/category/03.jpg";
+import img4 from "../../assets/images/category/04.jpg";
+import img5 from "../../assets/images/category/05.jpg";
+import img6 from "../../assets/images/category/06.jpg";
+
+// Konfigurasi teks
 const subTitle = "Choose Any Products";
 const title = "Buy Everything with Us";
 const btnText = "Get Started Now";
 
+// Daftar kategori
 const categoryList = [
   {
-    imgUrl: "src/assets/images/category/01.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img1,
+    imgAlt: "DSLR Camera Category",
     iconName: "icofont-brand-windows",
     title: "DSLR Camera",
   },
   {
-    imgUrl: "src/assets/images/category/02.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img2,
+    imgAlt: "Shoes Category",
     iconName: "icofont-brand-windows",
     title: "Shoes",
   },
   {
-    imgUrl: "src/assets/images/category/03.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img3,
+    imgAlt: "Photography Category",
     iconName: "icofont-brand-windows",
     title: "Photography",
   },
   {
-    imgUrl: "src/assets/images/category/04.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img4,
+    imgAlt: "Formal Dress Category",
     iconName: "icofont-brand-windows",
     title: "Formal Dress",
   },
   {
-    imgUrl: "src/assets/images/category/05.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img5,
+    imgAlt: "Colorful Bags Category",
     iconName: "icofont-brand-windows",
     title: "Colorful Bags",
   },
   {
-    imgUrl: "src/assets/images/category/06.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
+    imgUrl: img6,
+    imgAlt: "Home Decor Category",
     iconName: "icofont-brand-windows",
     title: "Home Decor",
   },
 ];
+
+// Komponen utama
 const HomeCategory = () => {
   return (
     <div className="category-section style-4 padding-tb">
       <div className="container">
-        {/* section header */}
+        {/* Header section */}
         <div className="section-header text-center">
           <span className="subtitle">{subTitle}</span>
           <h2 className="title">{title}</h2>
         </div>
 
-        {/* section Card */}
+        {/* Kartu kategori */}
         <div className="section-wrapper">
           <div className="row g-4 justify-content-center row-cols-md-3 row-cols-sm-2 row-cols-1">
             {categoryList.map((val, i) => (
               <div key={i} className="col">
                 <Link to={"/shop"} className="category-item">
                   <div className="category-inner">
-                    {/* category thumb */}
+                    {/* Thumbnail kategori */}
                     <div className="category-thumb">
-                      <img src={val.imgUrl} alt={""} />
+                      <img src={val.imgUrl} alt={val.imgAlt} />
                     </div>
-                    {/* content */}
+                    {/* Konten kategori */}
                     <div className="category-content">
-                      <div className="cate-icon ">
+                      <div className="cate-icon">
                         <i className={val.iconName}></i>
                       </div>
                       <Link to={"/shop"}>
@@ -78,6 +90,7 @@ const HomeCategory = () => {
             ))}
           </div>
 
+          {/* Tombol di bagian bawah */}
           <div className="text-center mt-5">
             <Link to={"/shop"} className="lab-btn">
               <span>{btnText}</span>

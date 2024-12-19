@@ -8,21 +8,26 @@ const desc =
 const year = "30+";
 const expareance = "Years Of Experiences";
 
+// imgUrl
+import imgUrl_1 from "../../assets/images/about/icon/01.jpg";
+import imgUrl_2 from "../../assets/images/about/icon/02.jpg";
+import imgUrl_3 from "../../assets/images/about/icon/03.jpg";
+
 const aboutList = [
   {
-    imgUrl: "/src/assets/images/about/icon/01.jpg",
+    imgUrl: imgUrl_1,
     imgAlt: "about icon rajibraj91 rajibraj",
     title: "Skilled Instructors",
     desc: "Distinctively provide acces mutfuncto users whereas communicate leveraged services",
   },
   {
-    imgUrl: "/src/assets/images/about/icon/02.jpg",
+    imgUrl: imgUrl_2,
     imgAlt: "about icon rajibraj91 rajibraj",
     title: "Get Certificate",
     desc: "Distinctively provide acces mutfuncto users whereas communicate leveraged services",
   },
   {
-    imgUrl: "/src/assets/images/about/icon/03.jpg",
+    imgUrl: imgUrl_3,
     imgAlt: "about icon rajibraj91 rajibraj",
     title: "Online Classes",
     desc: "Distinctively provide acces mutfuncto users whereas communicate leveraged services",

@@ -8,27 +8,33 @@ const conTitle =
   "Fill The Form Below So We Can Get To Know You And Your Needs Better.";
 const btnText = "Send our Message";
 
+// imgUrl
+import imgUrl_1 from "../../assets/images/icon/01.png";
+import imgUrl_2 from "../../assets/images/icon/02.png";
+import imgUrl_3 from "../../assets/images/icon/03.png";
+import imgUrl_4 from "../../assets/images/icon/04.png";
+
 const contactList = [
   {
-    imgUrl: "/src/assets/images/icon/01.png",
+    imgUrl: imgUrl_1,
     imgAlt: "contact icon",
     title: "Office Address",
     desc: "1201 park street, Fifth Avenue",
   },
   {
-    imgUrl: "/src/assets/images/icon/02.png",
+    imgUrl: imgUrl_2,
     imgAlt: "contact icon",
     title: "Phone number",
     desc: "+22698 745 632,02 982 745",
   },
   {
-    imgUrl: "/src/assets/images/icon/03.png",
+    imgUrl: imgUrl_3,
     imgAlt: "contact icon",
     title: "Send email",
     desc: "admin@shopcart.com",
   },
   {
-    imgUrl: "/src/assets/images/icon/04.png",
+    imgUrl: imgUrl_4,
     imgAlt: "contact icon",
     title: "Our website",
     desc: "www.shopcart.com",
