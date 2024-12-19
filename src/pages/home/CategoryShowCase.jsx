@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+/* eslint-disable no-unused-vars */
 import Rating from "../../components/Rating";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, filterByCategory } from "../../redux/slice";
+import { filterByCategory } from "../../redux/slice";
 
 const title = "Our Products";
 const menCloting = "men's clothing";
@@ -13,10 +13,6 @@ const CategoryShowCase = () => {
   const { filterProduct, activeCategory, loading } = useSelector(
     (state) => state.product
   );
-
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
 
   const handleFilter = (category) => {
     dispatch(filterByCategory(category));

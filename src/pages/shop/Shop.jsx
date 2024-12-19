@@ -1,6 +1,6 @@
-import { useEffect, useState, useMemo } from "react";
+import {  useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, filterByCategory } from "../../redux/slice";
+import {  filterByCategory } from "../../redux/slice";
 import PageHeaders from "../../components/PageHeaders";
 import ProductCard from "./ProductCard";
 import Pagination from "./Pagination";
@@ -22,14 +22,7 @@ const Shop = () => {
   const [curPage, setCurPage] = useState(1);
   const productsPerPage = 6;
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
-
-  useEffect(() => {
-    dispatch(filterByCategory(activeCategory));
-    setCurPage(1);
-  }, [activeCategory, product, dispatch]);
+  
 
   // Pagination logic
   const indexOfLastProduct = curPage * productsPerPage;

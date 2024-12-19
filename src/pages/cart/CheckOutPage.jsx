@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import "../../components/modal.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { resetCart } from "../../redux/slice";
+import { checkout, resetCart } from "../../redux/slice";
 
 const CheckOutPage = () => {
   const [show, setShow] = useState(false);
@@ -24,9 +24,10 @@ const CheckOutPage = () => {
   const from = location.state?.from?.pathname || "/";
 
   const handleOrderConfirm = () => {
+    dispatch(checkout());
+    dispatch(resetCart());
     alert("Your Order is placed successfully!");
     localStorage.removeItem("cart");
-    dispatch(resetCart());
     navigate(from, { replace: true });
   };
   return (

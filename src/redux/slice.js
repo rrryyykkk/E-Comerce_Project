@@ -84,7 +84,11 @@ const productSlice = createSlice({
       state.product = state.product.map((product) => {
         const cartItem = state.cart.find((cart) => cart.id === product.id);
         if (cartItem) {
-          product.stock -= cartItem.quantity;
+          if (cartItem < cartItem.quantity) {
+            console.error("Stock tidak cukup untuk produk:", product.title);
+          } else {
+            product.stock -= cartItem.quantity;
+          }
         }
         return product;
       });

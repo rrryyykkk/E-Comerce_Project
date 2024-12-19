@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectedCategory from "../../components/SelectedCategory";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../redux/slice";
+import { useSelector } from "react-redux";
+
 
 const title = (
   <h2>
@@ -14,13 +14,8 @@ const desc = "We have the largest collection of products";
 
 const Banner = () => {
   const [searchInput, setSearchInput] = useState("");
-  const dispatch = useDispatch();
   const { product: products, loading } = useSelector((state) => state.product);
   const [filteredProduct, setFilteredProduct] = useState([]);
-
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
 
   useEffect(() => {
     if (Array.isArray(products) && products.length > 0) {

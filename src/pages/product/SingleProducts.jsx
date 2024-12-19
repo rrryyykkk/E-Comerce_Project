@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PageHeaders from "../../components/PageHeaders";
 // swiper
@@ -9,15 +8,11 @@ import ProductDisplay from "./ProductDisplay";
 import Reviews from "./Reviews";
 import PopularPost from "../shop/PopularPost";
 import Tags from "../shop/Tags";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../redux/slice";
+import { useSelector } from "react-redux";
 
 const SingleProducts = () => {
-  const dispatch = useDispatch();
   const { product } = useSelector((state) => state.product);
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+
   const { id } = useParams();
 
   // filter product berdasarkan id
