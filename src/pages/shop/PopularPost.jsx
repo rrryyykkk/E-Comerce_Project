@@ -2,31 +2,36 @@ import { Link } from "react-router-dom";
 
 const title = "Most Popular Post";
 
+import imgUrl_1 from "../../assets/images/blog/10.jpg"
+import imgUrl_2 from "../../assets/images/blog/11.jpg"
+import imgUrl_3 from "../../assets/images/blog/12.jpg"
+import imgUrl_4 from "../../assets/images/blog/09.jpg"
+
 const postList = [
   {
     id: 1,
-    imgUrl: "/src/assets/images/blog/10.jpg",
+    imgUrl: imgUrl_1,
     imgAlt: "rajibraj91",
     title: "Poor People Campaign Our Resources",
     date: "Jun 05,2022",
   },
   {
     id: 2,
-    imgUrl: "/src/assets/images/blog/11.jpg",
+    imgUrl: imgUrl_2,
     imgAlt: "rajibraj91",
     title: "Poor Peoples Campaign Our Resources",
     date: "Jun 05,2022",
   },
   {
     id: 3,
-    imgUrl: "/src/assets/images/blog/12.jpg",
+    imgUrl: imgUrl_3,
     imgAlt: "rajibraj91",
     title: "Poor Peoples Campaign Our Resources",
     date: "Jun 05,2022",
   },
   {
     id: 4,
-    imgUrl: "/src/assets/images/blog/09.jpg",
+    imgUrl: imgUrl_4,
     imgAlt: "rajibraj91",
     title: "Poor Peoples Campaign Our Resources",
     date: "Jun 05,2022",
