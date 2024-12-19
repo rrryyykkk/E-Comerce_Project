@@ -223,7 +223,7 @@ const CartPage = () => {
                       <ul className="lab-ul">
                         <li>
                           <span className="pull-left">Cart Subtotal</span>
-                          <p className="pull-right">${cartSubTotal}</p>
+                          <p className="pull-right">${orderCartTotal}</p>
                         </li>
                         <li>
                           <span className="pull-left">
